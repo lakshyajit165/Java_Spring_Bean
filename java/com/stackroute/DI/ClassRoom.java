@@ -1,15 +1,19 @@
 package com.stackroute.DI;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
-public class ClassRoom {
+public class ClassRoom{
 
     Student student;
     Location location;
+
+    Mentor mentor;
 
     public Location getLocation() {
         return location;
@@ -29,37 +33,22 @@ public class ClassRoom {
         this.student = student;
     }
 
+    public Mentor getMentor() {
+        return mentor;
+    }
+
+    public void setMentor(Mentor mentor) {
+        this.mentor = mentor;
+    }
 
 
-//    @PostConstruct
-//    public void setDetails(){
-//        s.studentId = 1;
-//        s.age = 12;
-//        s.name = "John";
-//        s.gen = "Male";
-//    }
-//
-//    @Bean
-//    public void setLocation(){
-//        this.area = "Kormangala";
-//        this.city = "Bangalore";
-//        System.out.println(this.area + " " + this.city);
-//    }
-//
-//
-//    public void showDetails(){
-//
-//        System.out.println(
-//                "id: "+ s.studentId +
-//                " Name: " + s.name +
-//                " Gender: "+ s.gen +
-//                " Age: " + s.age
-//        );
-//    }
-     public void showDetails(){
+
+    public void showDetails(){
          System.out.println(student);
          System.out.println(location);
-     }
+         System.out.println(mentor);
+         
+    }
 
 
 }

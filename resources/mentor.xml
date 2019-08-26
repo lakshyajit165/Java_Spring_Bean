@@ -4,9 +4,12 @@
        xsi:schemaLocation="
           http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
-    <import resource="classroom.xml"/>
-
+    <bean id="mentor" class="com.stackroute.DI.Mentor">
+        <property name="name" value="Mentor1"></property>
+        <property name="id" value="1"></property>
+        <property name="age" value="30"></property>
+        <property name="gender" value="Male"></property>
+    </bean>
 
 
 
