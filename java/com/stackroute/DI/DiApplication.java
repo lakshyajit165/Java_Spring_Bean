@@ -13,8 +13,9 @@ public class DiApplication {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
 
 		ClassRoom c = (ClassRoom)applicationContext.getBean("classroom");
-
+		ClassRoom c1 = (ClassRoom)applicationContext.getBean("classroom2");
 		c.showDetails();
+		c1.showDetails();
 
 
 

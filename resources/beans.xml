@@ -6,7 +6,13 @@
 
     <bean id="classroom" class="com.stackroute.DI.ClassRoom">
         <property name="student" ref="student"></property>
+        <property name="location" ref="location"></property>
     </bean>
+    <bean id="classroom2" class="com.stackroute.DI.ClassRoom">
+        <property name="student" ref="student2"></property>
+        <property name="location" ref="location2"></property>
+    </bean>
+
     <bean id="student" class="com.stackroute.DI.Student">
         <property name="name" value="John"></property>
         <property name="studentId" value="1"></property>
@@ -14,5 +20,21 @@
         <property name="gen" value="Male"></property>
     </bean>
 
+    <bean id="student2" class="com.stackroute.DI.Student">
+        <property name="name" value="Jane"></property>
+        <property name="studentId" value="2"></property>
+        <property name="age" value="18"></property>
+        <property name="gen" value="Female"></property>
+    </bean>
 
+
+    <bean id="location" class="com.stackroute.DI.Location">
+        <property name="Area" value="Kormangala"></property>
+        <property name="City" value="Bangalore"></property>
+    </bean>
+
+    <bean id="location2" class="com.stackroute.DI.Location">
+        <property name="Area" value="Manyata"></property>
+        <property name="City" value="Bangalore"></property>
+    </bean>
 </beans>

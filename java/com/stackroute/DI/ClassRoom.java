@@ -9,6 +9,17 @@ import javax.annotation.PostConstruct;
 public class ClassRoom {
 
     Student student;
+    Location location;
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+
 
     public Student getStudent() {
         return student;
@@ -47,6 +58,7 @@ public class ClassRoom {
 //    }
      public void showDetails(){
          System.out.println(student);
+         System.out.println(location);
      }
 
 
