@@ -28,6 +28,7 @@ public class ClassRoom{
 
     public ClassRoom(Mentor mentor){
         this.mentor = mentor;
+        System.out.println("classroom constructor!");
     }
 
     public Location getLocation() {

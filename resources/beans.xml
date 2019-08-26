@@ -5,7 +5,28 @@
           http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <import resource="classroom.xml"/>
+    <import resource="location.xml"/>
+    <import resource="mentor.xml"/>
+    <import resource="student.xml"/>
+
+    <bean id="classroom" class="com.stackroute.DI.ClassRoom">
+        <!--            <property name="student" ref="student"></property>-->
+        <property name="location" ref="location"></property>
+        <!--        <property name="mentor" ref="mentor"></property>-->
+        <property name="student">
+            <list>
+                <ref bean = "student"/>
+                <ref bean = "student2"/>
+                <ref bean = "student"/>
+            </list>
+        </property>
+        <constructor-arg ref="mentor"></constructor-arg>
+
+    </bean>
+
+    <bean id="flippedclass" class="com.stackroute.DI.FlippedClass" parent="classroom">
+        <property name="duration" value="Duration: 3 hrs"/>
+    </bean>
 
 
 
