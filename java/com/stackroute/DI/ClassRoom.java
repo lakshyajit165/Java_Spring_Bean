@@ -7,13 +7,28 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.util.List;
 
 public class ClassRoom{
 
-    Student student;
+    private List<Student> student;
     Location location;
 
     Mentor mentor;
+
+    public List<Student> getStudent() {
+        return student;
+    }
+
+    public void setStudent(List<Student> student) {
+        this.student = student;
+    }
+
+
+
+    public ClassRoom(Mentor mentor){
+        this.mentor = mentor;
+    }
 
     public Location getLocation() {
         return location;
@@ -25,13 +40,13 @@ public class ClassRoom{
 
 
 
-    public Student getStudent() {
-        return student;
-    }
-
-    public void setStudent(Student student) {
-        this.student = student;
-    }
+//    public Student getStudent() {
+//        return student;
+//    }
+//
+//    public void setStudent(Student student) {
+//        this.student = student;
+//    }
 
     public Mentor getMentor() {
         return mentor;
@@ -47,7 +62,7 @@ public class ClassRoom{
          System.out.println(student);
          System.out.println(location);
          System.out.println(mentor);
-         
+
     }
 
 
